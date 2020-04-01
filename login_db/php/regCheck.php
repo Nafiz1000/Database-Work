@@ -7,15 +7,9 @@
 		$email = $_POST['email'];
 		$type = $_POST['type'];
 
-		$con = mysqli_connect('127.0.0.1', 'root', '', 'webtechtdb');
-
-		$sql2 = "select username from user where username='{$username}'";
-		$result = mysqli_query($con, $sql2);
-		$row = mysqli_fetch_assoc($result);
-		if($row[]){
-		}
-
+		$con = mysqli_connect('127.0.0.1', 'root', '', 'webtectdb');
 		$sql = "insert into users values('','{$username}','{$password}','{$email}', '{$type}')";
+		
 		if(mysqli_query($con, $sql)){
 			echo "Registration done!";
 		}else{
