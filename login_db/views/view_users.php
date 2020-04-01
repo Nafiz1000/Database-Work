@@ -1,9 +1,11 @@
 <?php
 	session_start();
-	//print_r($_SESSION['user']);
+
+	if(!isset($_SESSION['user'])){  
+		header("location: login.html");
+	} 	
 
 	require_once('../service/functions.php');
-	//require('db.php');
 	$result = getAllUsers();
 ?>
 
