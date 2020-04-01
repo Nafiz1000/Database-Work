@@ -8,7 +8,7 @@
 		$type = $_POST['type'];
 
 		$con = mysqli_connect('127.0.0.1', 'root', '', 'webtectdb');
-		$sql = "insert into users values('','{$username}','{$password}','{$email}', '{$type}')";
+		$sql = "insert into users values('{$username}','{$password}','','{$email}', '{$type}')";
 		
 		if(mysqli_query($con, $sql)){
 			echo "Registration done!";
